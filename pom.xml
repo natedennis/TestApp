@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.monarchnc</groupId>
+	<artifactId>testapp</artifactId>
+	<version>1.1.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>TestApp</name>
+	<description>A starter Java EE 6 webapp project for use on JBoss AS 7 / EAP 6, generated from the jboss-javaee6-webapp archetype</description>
+
+	<properties>
+		<seam.persistence.version>RELEASE</seam.persistence.version>
+        <org.richfaces.bom.version>4.3.0-SNAPSHOT</org.richfaces.bom.version>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<javaee6.with.tools.version>1.0.0.M4</javaee6.with.tools.version>
+	</properties>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.jboss.spec</groupId>
+        <artifactId>jboss-javaee-6.0</artifactId>
+        <version>2.0.0.Final</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-entitymanager</artifactId>
+        <version>4.1.1.Final</version>
+        <scope>provided</scope>
+      </dependency>
+	  <dependency>
+           <groupId>org.richfaces</groupId>
+           <artifactId>richfaces-bom</artifactId>
+           <version>${org.richfaces.bom.version}</version>
+           <scope>import</scope>
+           <type>pom</type>
+       </dependency>
+     <dependency>
+		<groupId>org.jboss.seam</groupId>
+		<artifactId>seam-bom</artifactId>
+		<version>3.1.0.Final</version>
+		<type>pom</type>
+		<scope>import</scope>
+	</dependency>
+
+     
+               
+	  </dependencies>
+  </dependencyManagement>
+
+
+		<dependencies>
+	  		<dependency>
+	            <groupId>org.richfaces.ui</groupId>
+	            <artifactId>richfaces-components-ui</artifactId>
+	             </dependency>
+	        <dependency>
+	            <groupId>org.richfaces.core</groupId>
+	            <artifactId>richfaces-core-impl</artifactId>
+	        </dependency>
+	        <dependency>
+    			<groupId>org.richfaces.sandbox.ui.slidfast</groupId>
+   				<artifactId>slidfast-ui</artifactId>
+   				<version>4.3.0-SNAPSHOT</version>
+		    </dependency>
+		
+			<dependency>
+				<groupId>org.jboss.bom</groupId>
+				<artifactId>jboss-javaee-6.0-with-tools</artifactId>
+				<version>${javaee6.with.tools.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+	
+		    <dependency>
+		      <groupId>org.hibernate.javax.persistence</groupId>
+		      <artifactId>hibernate-jpa-2.0-api</artifactId>
+		      <scope>provided</scope>
+		    </dependency>
+
+	
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<scope>provided</scope>
+			</dependency>
+
+		    <dependency>
+		      <groupId>org.jboss.seam.persistence</groupId>
+		      <artifactId>seam-persistence</artifactId>
+		    </dependency>
+	      
+			<dependency>
+			   <groupId>org.jboss.seam.security</groupId>
+			   <artifactId>seam-security-api</artifactId>
+			</dependency>
+			
+			<dependency>
+			   <groupId>org.jboss.seam.security</groupId>
+			   <artifactId>seam-security</artifactId>
+			   <scope>compile</scope>
+			</dependency>
+			
+		 <dependency>
+            <groupId>org.picketlink.idm</groupId>
+            <artifactId>picketlink-idm-core</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.ocpsoft</groupId>
+            <artifactId>ocpsoft-pretty-time</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ocpsoft</groupId>
+            <artifactId>prettyfaces-jsf2</artifactId>
+        </dependency>
+
+			<dependency>			
+			   <groupId>org.jboss.seam.faces</groupId>			
+			   <artifactId>seam-faces</artifactId>			
+			   <scope>compile</scope>			
+			</dependency>			
+			<dependency>
+			   <groupId>org.jboss.seam.faces</groupId>
+			   <artifactId>seam-faces-api</artifactId>
+			   <scope>compile</scope>
+			</dependency>
+			
+	      <dependency>
+	         <groupId>org.jboss.solder</groupId>
+	         <artifactId>solder-impl</artifactId>
+	      </dependency>
+	    
+
+		<dependency>
+		  <groupId>com.ocpsoft</groupId>
+		  <artifactId>prettyfaces-jsf2</artifactId>
+		</dependency>
+
+      <dependency>
+         <groupId>joda-time</groupId>
+         <artifactId>joda-time</artifactId>
+      </dependency>
+      	    
+      	<dependency>
+              <groupId>org.drools</groupId>
+              <artifactId>org.drools.eclipse</artifactId>
+              <version>5.4.0.Beta2</version>
+        </dependency>   
+      	    
+	    <dependency>
+	      <groupId>org.jboss.spec.javax.ejb</groupId>
+	      <artifactId>jboss-ejb-api_3.1_spec</artifactId>
+	      <scope>provided</scope>
+	    </dependency>
+	    
+	    <dependency>
+	      <groupId>javax.enterprise</groupId>
+	      <artifactId>cdi-api</artifactId>
+	      <scope>provided</scope>
+	    </dependency>
+	   
+	    <dependency>
+	        <groupId>org.jboss.spec.javax.ws.rs</groupId>
+	        <artifactId>jboss-jaxrs-api_1.1_spec</artifactId>
+	        <scope>provided</scope>
+	    </dependency>
+	       
+	    <dependency>
+	      <groupId>org.jboss.spec.javax.annotation</groupId>
+	      <artifactId>jboss-annotations-api_1.1_spec</artifactId>
+	      <scope>provided</scope>
+	    </dependency>
+	   
+	    <dependency>
+	      <groupId>org.jboss.spec.javax.faces</groupId>
+	      <artifactId>jboss-jsf-api_2.0_spec</artifactId>
+	      <scope>provided</scope>
+	    </dependency>
+	  
+		<dependency>
+		    <groupId>org.atmosphere</groupId>
+		    <artifactId>atmosphere-runtime</artifactId>
+		     </dependency>
+	    <dependency>
+		    <groupId>javax.validation</groupId>
+		    <artifactId>validation-api</artifactId>
+		</dependency>
+		<dependency>
+	            <groupId>javax.servlet</groupId>
+	            <artifactId>servlet-api</artifactId>
+	            <version>RELEASE</version>
+	            <scope>provided</scope>
+	        </dependency>
+	</dependencies>
+
+	  <build>
+    <finalName>testapp</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.1.1</version>
+        <extensions>false</extensions>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.jboss.as.plugins</groupId>
+        <artifactId>jboss-as-maven-plugin</artifactId>
+        <version>7.1.0.CR1</version>
+        <extensions>false</extensions>
+      </plugin>
+    </plugins>
+  </build>
+	
+</project>

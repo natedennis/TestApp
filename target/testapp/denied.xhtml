@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:s="http://jboss.org/seam/faces"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:o="http://java.sun.com/jsf/composite/crm"
+	template="/WEB-INF/templates/mobile.xhtml">
+	<ui:define name="metadata">
+		<f:metadata>
+			<s:viewAction action="#{alreadyLoggedIn.alreadyLoggedIn}" />
+		</f:metadata>
+	</ui:define>
+	<ui:define name="content">
+		<rich:panel header="Login" style="min-width:500px;width:600px;margin-right:auto;margin-left:auto;">
+			Access Denied
+		</rich:panel>
+	</ui:define>
+</ui:composition>
